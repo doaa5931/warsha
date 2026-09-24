@@ -1,0 +1,15 @@
+/* فلسفة التصميم: ردهة المعهد الدافئة — نسخة Next.js تبقي سطح الورق والحبر البترولي واضحين. */
+:root { --paper: #fbf7ee; --ink: #123d3a; --clay: #e56a3d; --line: #ded4c5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, sans-serif; }
+a { color: inherit; }
+main { max-width: 1100px; margin: auto; padding: 3.5rem 1.25rem; }
+.eyebrow { color: #b34c2a; font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
+.card { background: #fffdf8; border: 1px solid var(--line); padding: 1.25rem; }
+.card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 1rem; }
+.button { display: inline-block; border: 0; background: var(--ink); color: white; padding: .75rem 1rem; font-weight: 700; cursor: pointer; text-decoration: none; }
+.muted { color: #5d6d66; line-height: 1.75; }
+.form { display: grid; gap: 1rem; max-width: 520px; background: #fffdf8; padding: 1.5rem; border: 1px solid var(--line); }
+.input { padding: .8rem; border: 1px solid var(--line); font: inherit; }
+.message { border-right: 3px solid var(--clay); padding-right: .75rem; }

@@ -1,0 +1,62 @@
+/* فلسفة التصميم: ردهة المعهد الدافئة — ورق عاجي وحبر بترولي ومؤشرات طينية، مع احترام تسلسل المحتوى العربي. */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --paper: #fbf7ee;
+  --surface: #fffdf8;
+  --line: #dfd5c4;
+  --ink: #123d3a;
+  --muted-ink: #52645e;
+  --clay: #e56a3d;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #112b29;
+  --surface: #173634;
+  --line: #37534f;
+  --ink: #eff3e9;
+  --muted-ink: #bfd0c4;
+  color-scheme: dark;
+}
+
+* { border-color: var(--line); }
+html { scroll-behavior: smooth; direction: rtl; }
+body { margin: 0; min-width: 320px; background: var(--paper); color: var(--ink); direction: rtl; font-family: "IBM Plex Sans Arabic", sans-serif; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+.font-display { font-family: "Noto Kufi Arabic", sans-serif; }
+.brand-link, header a { color: #123d3a !important; text-decoration: none !important; }
+.clip-paper { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+.paper-slip { position: relative; box-shadow: 18px 18px 0 rgba(222, 212, 197, .48); }
+.paper-slip::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(191, 164, 131, .28); pointer-events: none; }
+.stamp-outline { display: grid; place-items: center; align-content: center; gap: 5px; width: 112px; height: 112px; flex: 0 0 auto; border: 2px solid #c55632; border-radius: 999px; color: #9e4326; font-family: "Noto Kufi Arabic", sans-serif; font-size: 10px; font-weight: 800; line-height: 1.7; text-align: center; transform: rotate(-9deg); }
+.timeline-dot { width: 8px; height: 8px; background: #e56a3d; border-radius: 999px; display: inline-block; }.timeline-line { width: 25px; height: 1px; background: #c8b69b; display: inline-block; }
+
+:root[data-theme="dark"] .bg-\[\#f6f1e7\],
+:root[data-theme="dark"] .bg-\[\#f8f3ea\],
+:root[data-theme="dark"] .bg-\[\#f7f1e7\],
+:root[data-theme="dark"] .bg-\[\#e9eee9\],
+:root[data-theme="dark"] .bg-\[\#f6f4ed\],
+:root[data-theme="dark"] .bg-\[\#fbf7ee\] { background-color: #173634 !important; }
+
+:root[data-theme="dark"] .text-\[\#123D3A\],
+:root[data-theme="dark"] .text-\[\#123d3a\] { color: #eff3e9 !important; }
+:root[data-theme="dark"] .text-\[\#52645e\],
+:root[data-theme="dark"] .text-\[\#53635d\],
+:root[data-theme="dark"] .text-\[\#5c665f\],
+:root[data-theme="dark"] .text-\[\#5d6d66\],
+:root[data-theme="dark"] .text-\[\#5f6d68\] { color: #bfd0c4 !important; }
+
+:root[data-theme="dark"] .brand-link, :root[data-theme="dark"] header a { color: #eff3e9 !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+.admin-dashboard input::placeholder, .admin-dashboard textarea::placeholder { color: #888; }
